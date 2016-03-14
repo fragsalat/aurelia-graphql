@@ -39,7 +39,8 @@ System.register(['aurelia-fetch-client', 'aurelia-framework', './config'], funct
             variables: this.getVariables && this.getVariables() || {}
           });
 
-          Promise.resolve(config.httpClient || Container.get(HttpClient)).then(function (httpClient) {
+          var container = Container.instance;
+          Promise.resolve(config.httpClient || container.get(HttpClient)).then(function (httpClient) {
             if (httpClient.fetch) {
               return httpClient.fetch(config.baseUri, {
                 method: 'post',

@@ -1,4 +1,7 @@
 import {config} from './config';
+export {GraphQL} from './decorators';
+export {wrap} from './wrapper';
+export {config};
 
 /**
  * Configure this plugin

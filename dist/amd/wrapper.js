@@ -41,7 +41,8 @@ define(['exports', 'aurelia-fetch-client', 'aurelia-framework', './config'], fun
             variables: this.getVariables && this.getVariables() || {}
           });
 
-          Promise.resolve(_config.config.httpClient || _aureliaFramework.Container.get(_aureliaFetchClient.HttpClient)).then(function (httpClient) {
+          var container = _aureliaFramework.Container.instance;
+          Promise.resolve(_config.config.httpClient || container.get(_aureliaFetchClient.HttpClient)).then(function (httpClient) {
             if (httpClient.fetch) {
               return httpClient.fetch(_config.config.baseUri, {
                 method: 'post',

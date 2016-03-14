@@ -35,7 +35,8 @@ export function wrap(target) {
         variables: this.getVariables && this.getVariables() || {}
       });
       // Get pre-configured or global fetch HttpClient instance
-      Promise.resolve(config.httpClient || Container.get(HttpClient))
+      let container = Container.instance;
+      Promise.resolve(config.httpClient || container.get(HttpClient))
         .then(httpClient => {
           // Only permit fetch client
           if (httpClient.fetch) {
