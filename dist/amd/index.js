@@ -1,4 +1,4 @@
-define(['exports'], function (exports) {
+define(['exports', './config'], function (exports, _config) {
   'use strict';
 
   Object.defineProperty(exports, '__esModule', {
@@ -6,7 +6,7 @@ define(['exports'], function (exports) {
   });
   exports.configure = configure;
 
-  function configure(config) {
-    config.globalResources('./hello-world');
+  function configure(aurelia, configCallback) {
+    configCallback(_config.config);
   }
 });

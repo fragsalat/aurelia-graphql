@@ -1,14 +1,18 @@
-System.register([], function (_export) {
+System.register(['./config'], function (_export) {
   'use strict';
+
+  var config;
 
   _export('configure', configure);
 
-  function configure(config) {
-    config.globalResources('./hello-world');
+  function configure(aurelia, configCallback) {
+    configCallback(config);
   }
 
   return {
-    setters: [],
+    setters: [function (_config) {
+      config = _config.config;
+    }],
     execute: function () {}
   };
 });

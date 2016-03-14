@@ -1,22 +1,20 @@
 {
-  "name": "aurelia-skeleton-plugin",
-  "version": "1.0.0-beta.1.0.1",
-  "description": "A starter kit for building an Aurelia plugin.",
+  "name": "aurelia-graphql",
+  "version": "0.0.1",
+  "description": "A plugin to get data from graphql server.",
   "keywords": [
     "aurelia",
     "plugin",
-    "skeleton"
+    "graphql"
   ],
-  "homepage": "http://aurelia.io",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-plugin/issues"
+    "url": "https://github.com/fragsalat/aurelia-graphql/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "author": "Thomas Schlage",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-plugin"
+    "url": "http://github.com/fragsalat/aurelia-graphql"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.18",
@@ -53,9 +51,7 @@
     "directories": {
       "dist": "dist/amd"
     },
-    "peerDependencies": {
-      
-    },
+    "peerDependencies": {},
     "devDependencies": {
       "aurelia-polyfills": "^1.0.0-beta.1.0.6",
       "babel": "babel-core@^5.8.24",
